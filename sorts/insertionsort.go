@@ -6,6 +6,20 @@ func (one Int) LessThan(that Int) bool {
 	return one < that
 }
 
+func (one Int) GreaterThan(that Int) bool {
+	return one > that
+}
+
+func (one Int) CompareTo(that Int) int {
+	if one < that {
+		return -1
+	} else if one > that {
+		return 1
+	} else {
+		return 0
+	}
+}
+
 func (one Int) Get() Int {
 	return one
 }
@@ -14,6 +28,20 @@ type String string
 
 func (one String) LessThan(that String) bool {
 	return one < that
+}
+
+func (one String) GreaterThan(that String) bool {
+	return one > that
+}
+
+func (one String) CompareTo(that String) int {
+	if one < that {
+		return -1
+	} else if one > that {
+		return 1
+	} else {
+		return 0
+	}
 }
 
 func (one String) Get() String {
